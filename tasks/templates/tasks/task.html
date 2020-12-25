@@ -1,0 +1,14 @@
+{%extends "tasks/hello.html"%}
+{%block content%}
+    <h1>Here Are Your Tasks</h1>
+    {% for Act in Act %}
+        <article class="media content-section">
+          <div class="media-body">
+            <div class="article-metadata">
+              <small class="text-muted">{{ Act.date_posted|date:"F d, Y" }}</small>
+            </div>
+            <p class="article-content">{{ Act.content }}</p>
+          </div>
+        </article>
+    {% endfor%}
+{% endblock content%}
